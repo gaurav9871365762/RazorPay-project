@@ -1,0 +1,103 @@
+.navbar {
+  background: #2874f0;
+  color: white;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.9;
+}
+
+.cart-link {
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff6161;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 968px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  
+  .nav-logo {
+    order: 1;
+  }
+  
+  .nav-links {
+    order: 2;
+  }
+  
+  /* Search bar full width on mobile */
+  .nav-container > div:not(.nav-logo):not(.nav-links) {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-container {
+    padding: 10px;
+  }
+  
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+}
